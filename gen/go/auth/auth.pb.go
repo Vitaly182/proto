@@ -232,7 +232,7 @@ func (x *LoginResponse) GetToken() string {
 	return ""
 }
 
-type IsAgminRequest struct {
+type IsAdminRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -240,8 +240,8 @@ type IsAgminRequest struct {
 	UserId int64 `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 }
 
-func (x *IsAgminRequest) Reset() {
-	*x = IsAgminRequest{}
+func (x *IsAdminRequest) Reset() {
+	*x = IsAdminRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_auth_auth_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -249,13 +249,13 @@ func (x *IsAgminRequest) Reset() {
 	}
 }
 
-func (x *IsAgminRequest) String() string {
+func (x *IsAdminRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*IsAgminRequest) ProtoMessage() {}
+func (*IsAdminRequest) ProtoMessage() {}
 
-func (x *IsAgminRequest) ProtoReflect() protoreflect.Message {
+func (x *IsAdminRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_auth_auth_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -267,19 +267,19 @@ func (x *IsAgminRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use IsAgminRequest.ProtoReflect.Descriptor instead.
-func (*IsAgminRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use IsAdminRequest.ProtoReflect.Descriptor instead.
+func (*IsAdminRequest) Descriptor() ([]byte, []int) {
 	return file_auth_auth_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *IsAgminRequest) GetUserId() int64 {
+func (x *IsAdminRequest) GetUserId() int64 {
 	if x != nil {
 		return x.UserId
 	}
 	return 0
 }
 
-type IsAgminResponse struct {
+type IsAdminResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -287,8 +287,8 @@ type IsAgminResponse struct {
 	IsAdmin bool `protobuf:"varint,1,opt,name=is_admin,json=isAdmin,proto3" json:"is_admin,omitempty"`
 }
 
-func (x *IsAgminResponse) Reset() {
-	*x = IsAgminResponse{}
+func (x *IsAdminResponse) Reset() {
+	*x = IsAdminResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_auth_auth_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -296,13 +296,13 @@ func (x *IsAgminResponse) Reset() {
 	}
 }
 
-func (x *IsAgminResponse) String() string {
+func (x *IsAdminResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*IsAgminResponse) ProtoMessage() {}
+func (*IsAdminResponse) ProtoMessage() {}
 
-func (x *IsAgminResponse) ProtoReflect() protoreflect.Message {
+func (x *IsAdminResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_auth_auth_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -314,12 +314,12 @@ func (x *IsAgminResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use IsAgminResponse.ProtoReflect.Descriptor instead.
-func (*IsAgminResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use IsAdminResponse.ProtoReflect.Descriptor instead.
+func (*IsAdminResponse) Descriptor() ([]byte, []int) {
 	return file_auth_auth_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *IsAgminResponse) GetIsAdmin() bool {
+func (x *IsAdminResponse) GetIsAdmin() bool {
 	if x != nil {
 		return x.IsAdmin
 	}
@@ -346,9 +346,9 @@ var file_auth_auth_proto_rawDesc = []byte{
 	0x49, 0x64, 0x22, 0x25, 0x0a, 0x0d, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x29, 0x0a, 0x0e, 0x49, 0x73, 0x41,
-	0x67, 0x6d, 0x69, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75,
+	0x64, 0x6d, 0x69, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75,
 	0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x75, 0x73,
-	0x65, 0x72, 0x49, 0x64, 0x22, 0x2c, 0x0a, 0x0f, 0x49, 0x73, 0x41, 0x67, 0x6d, 0x69, 0x6e, 0x52,
+	0x65, 0x72, 0x49, 0x64, 0x22, 0x2c, 0x0a, 0x0f, 0x49, 0x73, 0x41, 0x64, 0x6d, 0x69, 0x6e, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x19, 0x0a, 0x08, 0x69, 0x73, 0x5f, 0x61, 0x64,
 	0x6d, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x69, 0x73, 0x41, 0x64, 0x6d,
 	0x69, 0x6e, 0x32, 0xab, 0x01, 0x0a, 0x04, 0x41, 0x75, 0x74, 0x68, 0x12, 0x39, 0x0a, 0x08, 0x52,
@@ -358,10 +358,10 @@ var file_auth_auth_proto_rawDesc = []byte{
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x30, 0x0a, 0x05, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12,
 	0x12, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x52, 0x65, 0x71, 0x75,
 	0x65, 0x73, 0x74, 0x1a, 0x13, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x4c, 0x6f, 0x67, 0x69, 0x6e,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x07, 0x49, 0x73, 0x41, 0x67,
-	0x6d, 0x69, 0x6e, 0x12, 0x14, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x49, 0x73, 0x41, 0x67, 0x6d,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x36, 0x0a, 0x07, 0x49, 0x73, 0x41, 0x64,
+	0x6d, 0x69, 0x6e, 0x12, 0x14, 0x2e, 0x61, 0x75, 0x74, 0x68, 0x2e, 0x49, 0x73, 0x41, 0x64, 0x6d,
 	0x69, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x15, 0x2e, 0x61, 0x75, 0x74, 0x68,
-	0x2e, 0x49, 0x73, 0x41, 0x67, 0x6d, 0x69, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x2e, 0x49, 0x73, 0x41, 0x64, 0x6d, 0x69, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
 	0x42, 0x18, 0x5a, 0x16, 0x62, 0x65, 0x6b, 0x65, 0x74, 0x6f, 0x76, 0x2e, 0x61, 0x75, 0x74, 0x68,
 	0x2e, 0x76, 0x31, 0x3b, 0x61, 0x75, 0x74, 0x68, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x33,
@@ -385,16 +385,16 @@ var file_auth_auth_proto_goTypes = []interface{}{
 	(*RegisterResponse)(nil), // 1: auth.RegisterResponse
 	(*LoginRequest)(nil),     // 2: auth.LoginRequest
 	(*LoginResponse)(nil),    // 3: auth.LoginResponse
-	(*IsAgminRequest)(nil),   // 4: auth.IsAgminRequest
-	(*IsAgminResponse)(nil),  // 5: auth.IsAgminResponse
+	(*IsAdminRequest)(nil),   // 4: auth.IsAdminRequest
+	(*IsAdminResponse)(nil),  // 5: auth.IsAdminResponse
 }
 var file_auth_auth_proto_depIdxs = []int32{
 	0, // 0: auth.Auth.Register:input_type -> auth.RegisterRequest
 	2, // 1: auth.Auth.Login:input_type -> auth.LoginRequest
-	4, // 2: auth.Auth.IsAgmin:input_type -> auth.IsAgminRequest
+	4, // 2: auth.Auth.IsAdmin:input_type -> auth.IsAdminRequest
 	1, // 3: auth.Auth.Register:output_type -> auth.RegisterResponse
 	3, // 4: auth.Auth.Login:output_type -> auth.LoginResponse
-	5, // 5: auth.Auth.IsAgmin:output_type -> auth.IsAgminResponse
+	5, // 5: auth.Auth.IsAdmin:output_type -> auth.IsAdminResponse
 	3, // [3:6] is the sub-list for method output_type
 	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -457,7 +457,7 @@ func file_auth_auth_proto_init() {
 			}
 		}
 		file_auth_auth_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*IsAgminRequest); i {
+			switch v := v.(*IsAdminRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -469,7 +469,7 @@ func file_auth_auth_proto_init() {
 			}
 		}
 		file_auth_auth_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*IsAgminResponse); i {
+			switch v := v.(*IsAdminResponse); i {
 			case 0:
 				return &v.state
 			case 1:
